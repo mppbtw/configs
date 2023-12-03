@@ -1,7 +1,11 @@
 #!/bin/sh
 
 
-ln -s /home/$USER/configs/scripts/ /home/$USER/
+
+if [ ! -e "/home/$USER/configs/scripts/" ]; then
+    ln -s /home/$USER/configs/scripts/ /home/$USER/
+fi
+
 
 
 cd dotfiles
