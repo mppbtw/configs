@@ -22,4 +22,5 @@ require("lazy").setup(plugins)
 
 require("core")
 
-load_colour("gruvbox")
+-- Quick and dirty way to set the colorscheme, should do this with telescope or smth (baked beans guy plugin)
+load_colour("everforest")

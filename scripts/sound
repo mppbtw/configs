@@ -1,4 +1,8 @@
 #!/bin/sh
 
+killall pipewire || true
+killall pipewire-pulse || true
+killall wireplumber || true
+
 pipewire &
 wireplumber &

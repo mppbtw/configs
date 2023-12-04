@@ -5,8 +5,8 @@ return {
     config = function()
         require "oil".setup {
             columns = {
-                "icon",
                 "size",
+                "icon",
             },
             buf_options = {
                 buflisted = false,
@@ -37,10 +37,7 @@ return {
                 ["<C-h>"] = "actions.select_split",
                 ["<C-t>"] = "actions.select_tab",
                 ["<C-p>"] = "actions.preview",
-                ["<C-c>"] = "actions.close",
-                ["<C-l>"] = "actions.refresh",
                 ["-"] = "actions.parent",
-                ["_"] = "actions.open_cwd",
                 ["`"] = "actions.cd",
                 ["~"] = "actions.tcd",
                 ["g."] = "actions.toggle_hidden",
@@ -56,7 +53,7 @@ return {
                 end,
                 -- This function defines what will never be shown, even when `show_hidden` is set
                 is_always_hidden = function(name, _)
-                    return name == ".git/"
+                    return name == ".git/" or name == ".."
                 end,
             },
             -- Configuration for the floating window in oil.open_float

@@ -4,13 +4,13 @@ local plugins = {
     "telescope",
     "whichkey",
     "autopairs",
-    "lualine",
     "lsp",
     "rust_tools",
     "oil",
     "gitsigns",
     "vim-pencil",
     "guess_indent",
+    "transparent",
     "treesitter",
 }
 

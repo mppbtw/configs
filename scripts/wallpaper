@@ -1,0 +1,4 @@
+#!/bin/sh
+
+killall swaybg
+swaywall /usr/share/backgrounds/everforest
