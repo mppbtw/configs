@@ -1,37 +1,29 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
-# Read `man 5 sway` for a complete reference.
+exec /home/$USER/scripts/sound
 
-exec $USER/scripts/sound
 
-### Variables
-#
-# Logo key. Use Mod1 for Alt.
+###########################
+# Setting some values     #
+###########################
+
+# Mod4 is super key (use Mod1 for Alt if your fancy like that)
 set $mod Mod4
-# Home row direction keys, like vim
+
+# vimmy motion keys
 set $left h
 set $down j
 set $up k
 set $right l
-# Your preferred terminal emulator
-set $term foot
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
+
+set $term /home/$USER/scripts/terminal
+
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
-### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+# this is just the default wallpaper
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
+
+
+# this is monitor specific, so pls be careful
+output HDMI-A-1 resolution 1920x1080@75Hz position 1920,0
 
 ### Idle configuration
 #
@@ -52,7 +44,6 @@ input * {
     repeat_delay 250
 }
 
-# Start a terminal
 bindsym $mod+Return exec $term
 
 # Kill focused window

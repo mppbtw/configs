@@ -15,10 +15,6 @@ map("<Leader>wq", "<cmd>:wq<CR>")
 map("<Leader>n", "<cmd>:nohl<CR>")
 map("<Leader>w", "<cmd>:w")
 
-map("<Leader>bp", "<cmd>:bp<CR>")
-map("<Leader>bn", "<cmd>:bp<CR>")
-
-
 map("-", "<cmd>:Oil<CR>")
 
 -- Used for writing
@@ -27,7 +23,7 @@ map("k", "gk")
 map("0", "g0")
 map("$", "g$")
 
--- baked beans plugin
+-- baked beans guy plugin
 map("<Leader>ff", "<cmd>:Telescope find_files<CR>")
 map("<Leader>fg", "<cmd>:Telescope live_grep<CR>")
 map("<Leader>fb", "<cmd>:Telescope buffers<CR>")

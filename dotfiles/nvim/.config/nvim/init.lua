@@ -3,7 +3,7 @@ local load_colour = function(col)
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 end
 
--- knee yo vim
+-- bootstrap lazy package manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
