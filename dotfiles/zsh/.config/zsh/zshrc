@@ -1,0 +1,82 @@
+# might replace with DT's shell color scripts sometime
+neofetch
+
+# Enable colors and change the proompt
+autoload -U colors && colors
+PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+
+# I like to have huge history files, it gives me
+# better historical suggestions from zsh-autosuggestions
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.histfile
+
+
+# Enable tab completion
+autoload -U compinit
+zstyle ':completion:*' menu select
+
+# Case-insensitive and rough completion
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots) # Include hidden files
+
+# Vim motion keybinds for the completion menu
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -v '^?' backward-delete-char
+
+# Vim mode
+bindkey -v
+bindkey '^V' edit-command-line;
+autoload -U edit-command-line 
+zle -N edit-command-line 
+bindkey -M vicmd "v" edit-command-line
+
+# Sequences on startup
+echo -ne '\e[1 q' # Use block cursor on startup.
+echo -ne '\033[?12l' # Stop the blinking, stop the boats
+
+# Sequences for every new prompt
+preexec() { echo -ne '\e[1 q' ;} # Block cursor
+preexec() { echo -ne '\033[?12l' ;} # Stop blinking
+
+# Options
+#setopt MENU_COMPLETE
+#setopt NO_lIST_AMBIGUOUS
+
+# Some epic gamer aliases
+
+alias l="exa"
+alias ls="exa -l"
+alias la="exa -A"
+alias lsa="exa -lA"
+
+alias c="clear && exa -l"
+
+alias v="nvim"
+alias vi="nvim"
+alias f="cd"
+
+alias b="cd .."
+alias bb="cd ../.."
+alias bbb="cd ../../.."
+
+alias gc="git commit -m"
+alias gp="git push"
+alias gs="git status"
+alias ga="git add"
+alias gl="git clone"
+alias gd="git diff"
+
+alias s="sudo"
+
+alias pi="yay -S"
+alias pr="yay -R"
+alias pu="yay"
+
+source /home/$USER/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/$USER/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh

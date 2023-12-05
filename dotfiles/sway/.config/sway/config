@@ -24,7 +24,7 @@ output HDMI-A-1 resolution 1920x1080@75Hz position 1920,0
 output * bg `find /usr/share/backgrounds/everforest/ -type f | shuf -n 1` fill
 
 gaps inner 10
-gaps outer 5
+gaps outer 10
 
 default_border none
 
