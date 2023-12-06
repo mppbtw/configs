@@ -34,7 +34,7 @@ bindkey -v
 bindkey '^V' edit-command-line;
 autoload -U edit-command-line 
 zle -N edit-command-line 
-bindkey -M vicmd "v" edit-command-line
+bindkey -M vicmd "^V" edit-command-line
 
 # Sequences on startup
 echo -ne '\e[1 q' # Use block cursor on startup.
@@ -77,6 +77,9 @@ alias s="sudo"
 alias pi="yay -S"
 alias pr="yay -R"
 alias pu="yay"
+
+# Cool variables: nice one, :)!!
+export EDITOR=nvim
 
 source /home/$USER/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /home/$USER/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
