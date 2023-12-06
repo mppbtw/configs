@@ -85,6 +85,7 @@ bindsym $mod+Shift+Right move right
 ##################
 # spaces of work #
 ##################
+
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
 bindsym $mod+3 workspace number 3
@@ -111,17 +112,3 @@ bindsym $mod+f fullscreen
 bindsym $mod+Shift+space floating toggle
 
 bindsym $mod+space focus mode_toggle
-
-bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
