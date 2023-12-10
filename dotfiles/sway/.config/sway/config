@@ -1,3 +1,7 @@
+
+
+
+
 ###########################
 # Setting some values     #
 ###########################
@@ -11,11 +15,31 @@ set $down j
 set $up k
 set $right l
 
-set $wallDir /usr/share/backgrounds/everforest/
+set $scripts /home/$USER/scripts/
 
-set $term /home/$USER/scripts/terminal
+set $term $scripts/terminal
+set $browser $scripts/browser
 
+# TODO: better launcher
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
+
+
+
+
+##########################
+# run scripts on startup #
+##########################
+
+exec /home/$USER/scripts/sound
+exec_always /home/$USER/scripts/sway-focus-opacity
+exec_always swaync
+
+
+
+
+###############
+# decorations #
+###############
 
 # this is monitor specific, so pls be careful
 output HDMI-A-1 resolution 1920x1080@75Hz position 1920,0
@@ -28,21 +52,12 @@ gaps outer 10
 
 default_border none
 
-exec /home/$USER/scripts/sound
-exec_always /home/$USER/scripts/sway-focus-opacity
 
-### Idle configuration
-#
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
+
+
+##########
+# inputs #
+##########
 
 input * {
     xkb_layout "gb"
@@ -50,21 +65,49 @@ input * {
     repeat_delay 250
 }
 
-bindsym $mod+Return exec $term
 
-bindsym $mod+Shift+q kill
+
+
+################
+# key bindings #
+################
+
+# notification info (might be replaced with a dashboard sometime)
+bindsym $mod+c exec notify-send ":)" "$(date +'%T           %d/%m/%y')"
+
+# $mod+x -> Action on windows
+bindsym --release $mod+q kill
 
 bindsym $mod+d exec $menu
 
+# Super + mouse1 -> drag floating windows around
 floating_modifier $mod normal
 
+bindsym $mod+f fullscreen
+
+bindsym $mod+space floating toggle
+
+# sway actions
 bindsym $mod+Shift+c reload
 
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
+# $mod+Shift+x -> run programs
+
+# Note that $term is the exception because I run so many terminals
+# it wouldn't be comfortable to press Shift each time
+bindsym $mod+Return exec $term
+
+bindsym $mod+Shift+f exec $browser
+
+bindsym $mod+Shift+v exec 
+
+
+
 #########################
 # newtons law of motion #
 #########################
+
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
@@ -82,9 +125,12 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-##################
-# spaces of work #
-##################
+
+
+
+#############################
+# equality in the workspace #
+#############################
 
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
@@ -106,9 +152,3 @@ bindsym $mod+Shift+7 move container to workspace number 7
 bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
-
-bindsym $mod+f fullscreen
-
-bindsym $mod+Shift+space floating toggle
-
-bindsym $mod+space focus mode_toggle

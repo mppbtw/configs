@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+
+import time
+
+print("test first text", flush=True)
+
+time.sleep(3)
+
+print("", flush=True)

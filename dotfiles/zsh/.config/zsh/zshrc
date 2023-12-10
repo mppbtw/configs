@@ -78,6 +78,8 @@ alias pi="yay -S"
 alias pr="yay -R"
 alias pu="yay"
 
+alias g="grep -i"
+
 # Cool variables: nice one, :)!!
 export EDITOR=nvim
 
