@@ -12,7 +12,7 @@ local plugins = {
     "guess_indent",
     "transparent",
     "treesitter",
-    "galaxyline",
+    "lualine",
 }
 
 -- Transform the names of modules into their return values
