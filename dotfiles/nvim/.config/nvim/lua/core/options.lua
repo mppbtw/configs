@@ -1,5 +1,7 @@
 local set = vim.opt
 
+vim.g.zig_fmt_parse_errors=0
+
 set.so = 999
 set.guicursor = ""
 set.number = true
