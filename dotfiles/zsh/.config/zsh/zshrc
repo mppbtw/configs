@@ -1,5 +1,5 @@
 # might replace with DT's shell color scripts sometime
-neofetch
+neofetch | lolcat
 
 # Enable colors and change the proompt
 autoload -U colors && colors

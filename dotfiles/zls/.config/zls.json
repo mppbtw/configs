@@ -1,0 +1,5 @@
+{
+  "warn_style": true,
+  "include_at_in_builtins": true,
+  "dangerous_comptime_experiments_do_not_enable": true
+}
