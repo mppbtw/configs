@@ -11,7 +11,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.histfile
 
-HISTORY_IGNORE="yt-dlp*"
+HISTORY_IGNORE="yt-dlp* mpv"
 
 # Enable tab completion
 autoload -U compinit
