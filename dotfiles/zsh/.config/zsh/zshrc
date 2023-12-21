@@ -12,6 +12,7 @@ SAVEHIST=10000
 HISTFILE=~/.histfile
 
 HISTORY_IGNORE="yt-dlp* mpv"
+setopt HIST_IGNORE_DUPS
 
 # Enable tab completion
 autoload -U compinit
