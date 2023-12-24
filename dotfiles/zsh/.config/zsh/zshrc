@@ -77,6 +77,7 @@ alias gs="git status"
 alias ga="git add"
 alias gl="git clone"
 alias gd="git diff"
+alias gf="git fetch"
 
 alias s="sudo"
 
