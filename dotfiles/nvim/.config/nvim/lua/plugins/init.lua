@@ -8,7 +8,6 @@ local plugins = {
     "rust_tools",
     "oil",
     "gitsigns",
-    "vim-pencil",
     "guess_indent",
     "transparent",
     "treesitter",
