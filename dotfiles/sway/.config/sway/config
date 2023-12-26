@@ -34,6 +34,8 @@ exec /home/$USER/scripts/sound
 exec_always /home/$USER/scripts/sway-focus-opacity
 exec_always swaync
 
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
 
 
 
