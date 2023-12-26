@@ -56,21 +56,26 @@ preexec() { echo -ne '\033[?12l' ;} # Stop blinking
 
 # Some epic gamer aliases
 
+# listing files in cool and funny way
 alias l="exa"
 alias ls="exa -l"
 alias la="exa -A"
 alias lsa="exa -lA"
 
+# clean slate
 alias c="clear && exa -l"
 
+# vi vi vi the editor of the beast
 alias v="nvim"
 alias vi="nvim"
 alias f="cd"
 
+# we gotta get out of here
 alias b="cd .."
 alias bb="cd ../.."
 alias bbb="cd ../../.."
 
+# linus file keeping program
 alias gc="git commit -m"
 alias gp="git push"
 alias gs="git status"
@@ -79,13 +84,21 @@ alias gl="git clone"
 alias gd="git diff"
 alias gf="git fetch"
 
+# make me a sandwich
 alias s="sudo"
 
+# hooray
 alias pi="yay -S"
 alias pr="yay -R"
 alias pu="yay"
 
 alias g="grep -i"
+
+# whats the crab called again
+alias cb="cargo build"
+alias cr="cargo run"
+alias ca="cargo add"
+alias cf="cargo fmt"
 
 # Cool variables: nice one, :)!!
 export EDITOR=nvim
