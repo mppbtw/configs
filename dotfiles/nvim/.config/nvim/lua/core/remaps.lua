@@ -5,7 +5,6 @@ local function map(lhs, rhs, mode, opts)
 end
 
 vim.g.mapleader = " "
-
 -- NOTE: These are ALL of the keymaps I use, even
 -- plugin ones because I hate ambiguity as to
 -- where the config defines stuff.
@@ -15,9 +14,10 @@ map("<Leader>wq", "<cmd>:wq<CR>")
 map("<Leader>n", "<cmd>:nohl<CR>")
 map("<Leader>w", "<cmd>:w")
 
+-- File navigation
 map("-", "<cmd>:Oil<CR>")
 
--- Used for writing
+-- Used for writing multiple line wraps
 map("j", "gj")
 map("k", "gk")
 map("0", "g0")
@@ -31,3 +31,9 @@ map("<Leader>ft", "<cmd>:Telescope treesitter<CR>")
 
 -- This is here just so that nvim-cmp can handle command completions
 map("<Tab>", "", "c")
+
+-- Switching split focus
+map("<C-h>", "<C-w>h")
+map("<C-j>", "<C-w>j")
+map("<C-k>", "<C-w>k")
+map("<C-l>", "<C-w>l")

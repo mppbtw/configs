@@ -1,7 +1,3 @@
-
-
-
-
 ###########################
 # Setting some values     #
 ###########################
@@ -30,7 +26,7 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 # run scripts on startup #
 ##########################
 
-exec /home/$USER/scripts/sound
+#exec /home/$USER/scripts/sound
 exec_always /home/$USER/scripts/sway-focus-opacity
 exec_always swaync
 
