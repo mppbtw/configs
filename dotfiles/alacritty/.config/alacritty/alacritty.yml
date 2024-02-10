@@ -1,5 +1,5 @@
 import:
-  - ~/configs/dotfiles/alacritty/.config/alacritty/themes/everforest_dark.yaml
+  - ~/configs/dotfiles/alacritty/.config/alacritty/themes/catppuccin_latte.yaml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -268,9 +268,9 @@ colors:
   # Color used for the footer bar on the bottom, used by search regex input,
   # hyperlink URI preview, etc.
   #
-  #footer_bar:
-  #  background: '#c5c8c6'
-  #  foreground: '#1d1f21'
+  footer_bar:
+    background: '#c5c8c6'
+    foreground: '#1d1f21'
 
   # Selection colors
   #

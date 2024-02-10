@@ -30,5 +30,15 @@ return {
                 disable_background = true
             }
         end
+    },
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        event = "VeryLazy",
+        config = function()
+            require "catppuccin".setup {
+                disable_background = false
+            }
+        end
     }
 }

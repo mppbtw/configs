@@ -1,34 +1,4 @@
-import = ["/home/mpp/configs/dotfiles/alacritty/.config/alacritty/themes/everforest_dark.toml"]
-
-[colors.cursor]
-cursor = "CellForeground"
-text = "CellBackground"
-
-[colors.hints.end]
-background = "#1d1f21"
-foreground = "#e9ff5e"
-
-[colors.hints.start]
-background = "#e9ff5e"
-foreground = "#1d1f21"
-
-[colors.primary]
-background = "#1d1f21"
-bright_foreground = "#eaeaea"
-dim_foreground = "#828482"
-foreground = "#c5c8c6"
-
-[colors.search.focused_match]
-background = "#000000"
-foreground = "#ffffff"
-
-[colors.search.matches]
-background = "#ffffff"
-foreground = "#000000"
-
-[colors.vi_mode_cursor]
-cursor = "CellForeground"
-text = "CellBackground"
+import = ["/home/mpp/configs/dotfiles/alacritty/.config/alacritty/themes/catppuccin_mocha.yaml.toml"]
 
 [env]
 TERM = "alacritty"
