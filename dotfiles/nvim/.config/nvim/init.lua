@@ -23,4 +23,4 @@ require("lazy").setup(plugins)
 require("core")
 
 -- Quick and dirty way to set the colorscheme, should do this with telescope or smth (baked beans guy plugin)
-load_colour("catppuccin")
+load_colour("everforest")

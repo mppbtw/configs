@@ -1,4 +1,4 @@
-import = ["/home/mpp/configs/dotfiles/alacritty/.config/alacritty/themes/catppuccin_mocha.yaml.toml"]
+import = ["/home/mpp/configs/dotfiles/alacritty/.config/alacritty/themes/everforest_dark.toml"]
 
 [env]
 TERM = "alacritty"
