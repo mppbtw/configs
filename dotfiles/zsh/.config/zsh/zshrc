@@ -103,6 +103,7 @@ alias cr="cargo run"
 alias ca="cargo add"
 alias cf="cargo fmt"
 alias ch="cargo check"
+alias ct="cargo test"
 
 alias 2024='echo "YEAR OF THE DESKTOP"'
 
