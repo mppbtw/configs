@@ -5,8 +5,6 @@ pfetch
 autoload -U colors && colors
 PS1="%B %{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$reset_color%}%b "
 
-# I like to have huge history files, it gives me
-# better historical suggestions from zsh-autosuggestions
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.histfile
@@ -31,16 +29,9 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
-# Vim mode
-bindkey -v
-bindkey '^V' edit-command-line;
-autoload -U edit-command-line 
-zle -N edit-command-line 
-bindkey -M vicmd "^V" edit-command-line
-
-bindkey "^[[3~" delete-char
-bindkey "^[[H" beginning-of-line
-bindkey "^[[F" end-of-line
+bindkey "^[[3~" delete-char # Delete
+bindkey "^[[H" beginning-of-line # Home
+bindkey "^[[F" end-of-line # End
 
 # Sequences on startup
 echo -ne '\e[1 q' # Use block cursor on startup.
@@ -49,6 +40,9 @@ echo -ne '\033[?12l' # Stop the blinking, stop the boats
 # Sequences for every new prompt
 preexec() { echo -ne '\e[1 q' ;} # Block cursor
 preexec() { echo -ne '\033[?12l' ;} # Stop blinking
+
+ZVM_CURSOR_STYLE_ENABLED=false # Stop zsh-vi-mode from changing the cursor
+ZVM_VI_HIGHLIGHT_BACKGROUND=black
 
 # Options
 #setopt MENU_COMPLETE
