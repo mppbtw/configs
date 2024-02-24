@@ -60,7 +60,7 @@ alias la="eza -A --group-directories-first"
 alias lsa="eza -lA --group-directories-first"
 
 # clean slate
-alias c="clear && exa -l"
+alias c="clear && eza -l --group-directories-first"
 
 # vi vi vi the editor of the beast
 alias v="nvim"
