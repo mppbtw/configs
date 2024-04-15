@@ -21,5 +21,12 @@ return {
         }
     end,
 
+    ["clangd"] = function()
+        lspconfig.clangd.setup {
+            capabilities = capabilities,
+            cmd = {"clangd", "--enable-config"},
+        }
+    end,
+
     ["rust_analyzer"] = function() end
 }
