@@ -99,6 +99,8 @@ alias cf="cargo fmt"
 alias ch="cargo check"
 alias ct="cargo test"
 
+alias feh="feh --scale-down"
+
 alias 2024='echo "YEAR OF THE DESKTOP"'
 
 # Cool variables: nice one, :)!!
