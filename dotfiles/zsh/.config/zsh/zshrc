@@ -9,7 +9,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.histfile
 
-HISTORY_IGNORE="(yt-dlp*|mpv*)"
+HISTORY_IGNORE="( *)"
 setopt HIST_IGNORE_DUPS
 
 # Enable tab completion
@@ -49,6 +49,11 @@ ZVM_VI_HIGHLIGHT_BACKGROUND=black
 #setopt NO_lIST_AMBIGUOUS
 
 # Some epic gamer aliases
+
+# Most of this comes from https://wiki.archlinux.org/title/Color_output_in_console
+alias grep="grep --color=auto"
+alias diff="diff --color=auto"
+alias ip="ip -color=auto"
 
 # Theres probably a better way to do this
 alias ipsum='echo "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."'
@@ -105,6 +110,7 @@ alias 2024='echo "YEAR OF THE DESKTOP"'
 
 # Cool variables: nice one, :)!!
 export EDITOR=nvim
+export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
 source /home/$USER/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /home/$USER/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
