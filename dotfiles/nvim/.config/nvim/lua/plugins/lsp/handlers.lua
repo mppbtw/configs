@@ -28,5 +28,7 @@ return {
         }
     end,
 
+
+    -- Some stuff for which I have seperate plugins which handle setting up the lsp servers.
     ["rust_analyzer"] = function() end
 }
