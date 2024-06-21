@@ -8,7 +8,6 @@ return {
                 mappings = {
                     i = {
                         ["<C-h>"] = "which_key",
-                        ["-"] = require "telescope.actions".close,
                     }
                 }
             },

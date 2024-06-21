@@ -39,3 +39,6 @@ map("<C-l>", "<C-w>l")
 
 -- Obsidian notes stuff
 map("<Leader>of", "<cmd>:ObsidianFollowLink<CR>")
+map("<Leader>ol", "<cmd>:ObsidianLink<CR>")
+map("<Leader>on", "<cmd>:ObsidianNew<CR>")
+map("<Leader>fo", "<cmd>:ObsidianQuickSwitch<CR>")

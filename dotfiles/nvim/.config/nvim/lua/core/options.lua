@@ -21,6 +21,7 @@ set.swapfile = false
 set.foldenable = false
 set.cursorline = false
 set.list = false
+set.conceallevel = 2
 
 set.listchars = {
     space = " ",
