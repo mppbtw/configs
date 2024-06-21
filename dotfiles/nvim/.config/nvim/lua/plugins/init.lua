@@ -13,6 +13,7 @@ local plugins = {
     "treesitter",
     "lualine",
     "harpoon",
+    "obsidian",
 }
 
 -- Transform the names of modules into their return values

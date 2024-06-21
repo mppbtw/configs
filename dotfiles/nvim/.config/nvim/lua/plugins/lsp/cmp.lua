@@ -42,8 +42,14 @@ return {
                 }),
 
                 sources = cmp.config.sources({
-                    { name = "nvim_lsp" },
-                    { name = "nvim_lua" },
+                    { name = "nvim_lsp",
+                    entry_filter = function(entry, _)
+                        return require("cmp").lsp.CompletionItemKind.Text ~= entry:get_kind()
+                    end },
+                    { name = "nvim_lua",
+                    entry_filter = function(entry, _)
+                        return require("cmp").lsp.CompletionItemKind.Text ~= entry:get_kind()
+                    end },
                     { name = "path" },
                     { name = "buffer", keyword_length = 5 },
                     { name = "luasnip" },

@@ -1,5 +1,6 @@
 return {
-    "nvim-telescope/telescope.nvim",
+    {"octarect/telescope-menu.nvim"},
+    {"nvim-telescope/telescope.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
         require "telescope".setup {
@@ -21,12 +22,24 @@ return {
                 -- builtin picker
             },
             extensions = {
-                -- Your extension configuration goes here:
-                -- extension_name = {
-                --   extension_config_key = value,
-                -- }
-                -- please take a look at the readme of the extension you want to configure
+                menu = {
+                    config_edit = {
+                        items = {
+                            {"nvim", 'lua require("core.scripts").config_edit("nvim")'},
+                            {"alacritty", 'lua require("core.scripts").config_edit("alacritty")'},
+                            {"sway", 'lua require("core.scripts").config_edit("sway")'},
+                            {"wofi", 'lua require("core.scripts").config_edit("wofi")'},
+                            {"mpv", 'lua require("core.scripts").config_edit("mpv")'},
+                            {"hyprland", 'lua require("core.scripts").config_edit("hyprland")'},
+                            {"hyprpaper", 'lua require("core.scripts").config_edit("hyprpaper")'},
+                            {"zsh", 'lua require("core.scripts").config_edit("zsh")'},
+                            {"swaync", 'lua require("core.scripts").config_edit("swaync")'}
+                        }
+                    }
+                }
             }
         }
+        require("telescope").load_extension("menu")
     end
+    }
 }
