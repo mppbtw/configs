@@ -11,6 +11,7 @@ return {
                     }
                 }
             },
+            file_sorter = require("telescope.sorters").fuzzy_with_index_bias,
             pickers = {
                 -- Default configuration for builtin pickers goes here:
                 -- picker_name = {

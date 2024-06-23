@@ -14,6 +14,7 @@ local plugins = {
     "lualine",
     "harpoon",
     "obsidian",
+    "fugitive",
 }
 
 -- Transform the names of modules into their return values

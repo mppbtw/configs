@@ -24,9 +24,10 @@ map("$", "g$")
 map("<Leader>ff", "<cmd>:Telescope find_files<CR>") --find files
 map("<Leader>fg", "<cmd>:Telescope live_grep<CR>") --find grep
 map("<Leader>fb", "<cmd>:Telescope buffers<CR>") --find buffers
-map("<Leader>ft", "<cmd>:Telescope treesitter<CR>") --find w/ treesitter
+map("<Leader>ft", "<cmd>:Telescope find_files<CR>") --find from tree (only look for files under current directory in Oil) 
 map("<Leader>fh", "<cmd>:Telescope help_tags<CR>") --find help
 map("<Leader>fc", "<cmd>:Telescope menu config_edit<CR>") --find config
+map("<Leader>fn", "<cmd>:ObsidianQuickSwitch<CR>") -- find notes (obsidian)
 
 -- This is here just so that nvim-cmp can handle command completions
 map("<Tab>", "", "c")
@@ -41,4 +42,3 @@ map("<C-l>", "<C-w>l")
 map("<Leader>of", "<cmd>:ObsidianFollowLink<CR>")
 map("<Leader>ol", "<cmd>:ObsidianLink<CR>")
 map("<Leader>on", "<cmd>:ObsidianNew<CR>")
-map("<Leader>fo", "<cmd>:ObsidianQuickSwitch<CR>")
