@@ -115,3 +115,5 @@ export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist non
 source /home/$USER/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /home/$USER/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /home/$USER/.config/zsh/zsh-vi-mode/zsh-vi-mode.zsh
+
+export PATH=/usr/local/bin/:$PATH
