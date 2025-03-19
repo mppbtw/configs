@@ -1,6 +1,7 @@
 return {
     "nvim-lualine/lualine.nvim",
     config = function()
+        prose = require "nvim-prose"
         require "lualine".setup {
             options = {
                 icons_enabled = true,
@@ -24,7 +25,12 @@ return {
                 lualine_a = {'mode'},
                 lualine_b = {'branch', 'diff', 'diagnostics'},
                 lualine_c = {'filename'},
-                lualine_x = {'encoding', 'fileformat', 'filetype'},
+                lualine_x = {
+                    'encoding',
+                    'fileformat',
+                    'filetype',
+                    {prose.word_count, cond = prose.is_available }
+                },
                 lualine_y = {'progress'},
                 lualine_z = {'location'}
             },

@@ -5,6 +5,8 @@ pfetch
 autoload -U colors && colors
 PS1="%B %{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$reset_color%}%b "
 
+XDG_CONFIG_HOME=~/.config
+
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.histfile
@@ -106,7 +108,7 @@ alias ct="cargo test"
 
 alias feh="feh --scale-down"
 
-alias 2024='echo "YEAR OF THE DESKTOP"'
+alias 2025='echo "YEAR OF THE LINUX DESKTOP"'
 
 # Cool variables: nice one, :)!!
 export EDITOR=nvim

@@ -7,6 +7,7 @@ local plugins = {
     "lsp",
     -- "rustaceanvim",
     "oil",
+    "prose",
     "gitsigns",
     "guess_indent",
     "transparent",
@@ -15,6 +16,8 @@ local plugins = {
     "harpoon",
     "obsidian",
     "fugitive",
+    "cord",
+    "surround",
 }
 
 -- Transform the names of modules into their return values

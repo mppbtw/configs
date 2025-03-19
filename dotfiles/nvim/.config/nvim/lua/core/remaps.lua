@@ -14,6 +14,9 @@ map("<Leader>n", "<cmd>:nohl<CR>")
 -- File navigation
 map("-", "<cmd>:Oil<CR>")
 
+-- writing keybinds
+vim.api.nvim_set_keymap('i', '<C-BS>', '<C-W>', {noremap = true})
+
 -- Used for writing multiple line wraps
 map("j", "gj")
 map("k", "gk")
