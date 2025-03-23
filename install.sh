@@ -1,8 +1,7 @@
 #!/bin/sh
 
-chmod +x /home/$USER/configs/scripts/*
-if [ ! -e "/home/$USER/configs/scripts/" ]; then
-    ln -s /home/$USER/configs/scripts/ /home/$USER/
+if ! [[ -e ./dotfiles/hypr/.config/hypr/devices.conf ]]; then
+    ./configure.sh
 fi
 
 cd dotfiles
