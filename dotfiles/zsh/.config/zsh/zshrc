@@ -112,7 +112,7 @@ alias 2025='echo "YEAR OF THE LINUX DESKTOP"'
 
 # Cool variables: nice one, :)!!
 export EDITOR=nvim
-export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
+export MANPAGER="nvim +Man! "
 
 source /home/$USER/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /home/$USER/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
