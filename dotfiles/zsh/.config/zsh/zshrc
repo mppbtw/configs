@@ -89,7 +89,8 @@ alias gd="git diff"
 alias gf="git fetch"
 
 # make me a sandwich
-alias s="sudo"
+alias s="/usr/bin/sudo"
+alias sudo="echo 'sudo: command not found'"
 
 # hooray
 alias pi="yay -S"
@@ -118,4 +119,4 @@ source /home/$USER/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 source /home/$USER/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /home/$USER/.config/zsh/zsh-vi-mode/zsh-vi-mode.zsh
 
-export PATH=/usr/local/bin/:$PATH
+export PATH=/usr/local/bin/:/home/mpp/.cargo/bin:$PATH
