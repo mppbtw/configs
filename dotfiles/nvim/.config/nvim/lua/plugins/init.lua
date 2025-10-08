@@ -5,7 +5,6 @@ local plugins = {
     "whichkey",
     "autopairs",
     "lsp",
-    -- "rustaceanvim",
     "oil",
     "prose",
     "gitsigns",
