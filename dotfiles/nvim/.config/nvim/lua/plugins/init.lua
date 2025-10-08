@@ -14,7 +14,6 @@ local plugins = {
     "treesitter",
     "lualine",
     "harpoon",
-    "obsidian",
     "fugitive",
     "cord",
     "surround",

@@ -16,7 +16,6 @@ return {
             mason_lspconfig.setup {
                 ensure_installed = { "lua_ls", "rust_analyzer" }
             }
-            mason_lspconfig.setup_handlers(handlers)
         end
     },
     require("plugins.lsp.cmp")
