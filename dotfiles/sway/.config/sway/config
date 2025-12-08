@@ -1,57 +1,33 @@
-###########################
-# Setting some values     #
-###########################
-
-# Mod4 is super key (use Mod1 for Alt if your fancy like that)
 set $mod Mod4
 
-# vimmy motion keys
 set $left h
 set $down j
 set $up k
 set $right l
 
-set $scripts /home/$USER/scripts/
 
-set $term $scripts/terminal
-set $browser $scripts/browser
+set $term alacritty
 
 # TODO: better launcher
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu wofi --show drun
 
 
-
-
-##########################
-# run scripts on startup #
-##########################
-
-#exec /home/$USER/scripts/sound
-exec_always /home/$USER/scripts/sway-focus-opacity
 exec_always swaync
 
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
-
-
-
+exec python3 /home/$USER/configs/sway_master_stack.py
 
 ###############
 # decorations #
 ###############
 
-# this is monitor specific, so pls be careful
-output HDMI-A-1 resolution 1920x1080@75Hz position 1920,0
+output HDMI-A-1 resolution 2560x1440@144Hz
 
-# wallpaper (picks random one when sway reloads this config file)
-output * bg `find /usr/share/backgrounds/everforest/ -type f | shuf -n 1` fill
+gaps inner 0
+gaps outer 0
 
-gaps inner 10
-gaps outer 10
-
-default_border none
-
-
-
+default_border pixel 2
+client.focused          #000000 #000000 #000000 #000000 #ffffff
 
 ##########
 # inputs #

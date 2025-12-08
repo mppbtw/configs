@@ -119,4 +119,4 @@ source /home/$USER/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 source /home/$USER/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /home/$USER/.config/zsh/zsh-vi-mode/zsh-vi-mode.zsh
 
-export PATH=/usr/local/bin/:/home/mpp/.cargo/bin:$PATH
+export PATH=/usr/local/bin/:/home/mpp/.cargo/bin:$PATH:/home/mpp/.local/bin
