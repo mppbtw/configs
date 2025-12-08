@@ -20,6 +20,8 @@ exec python3 /home/$USER/configs/sway_master_stack.py
 ###############
 # decorations #
 ###############
+set $wallpaper /home/$USER/configs/wallpapers/confusing.png
+exec_always swaybg -m fill -i configs/wallpapers/confusing.png
 
 output HDMI-A-1 resolution 2560x1440@144Hz
 
