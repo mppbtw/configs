@@ -1,4 +1,3 @@
-# might replace with DT's shell color scripts sometime
 pfetch
 
 # Enable colors and change the proompt
@@ -14,17 +13,14 @@ HISTFILE=~/.histfile
 HISTORY_IGNORE="( *)"
 setopt HIST_IGNORE_DUPS
 
-# Enable tab completion
 autoload -U compinit
 zstyle ':completion:*' menu select
 
-# Case-insensitive and rough completion
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots) # Include hidden files
 
-# Vim motion keybinds for the completion menu
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
@@ -35,51 +31,36 @@ bindkey "^[[3~" delete-char # Delete
 bindkey "^[[H" beginning-of-line # Home
 bindkey "^[[F" end-of-line # End
 
-# Sequences on startup
 echo -ne '\e[1 q' # Use block cursor on startup.
 echo -ne '\033[?12l' # Stop the blinking, stop the boats
 
-# Sequences for every new prompt
 preexec() { echo -ne '\e[1 q' ;} # Block cursor
 preexec() { echo -ne '\033[?12l' ;} # Stop blinking
 
 ZVM_CURSOR_STYLE_ENABLED=false # Stop zsh-vi-mode from changing the cursor
 ZVM_VI_HIGHLIGHT_BACKGROUND=black
 
-# Options
-#setopt MENU_COMPLETE
-#setopt NO_lIST_AMBIGUOUS
-
-# Some epic gamer aliases
-
-# Most of this comes from https://wiki.archlinux.org/title/Color_output_in_console
 alias grep="grep --color=auto"
 alias diff="diff --color=auto"
 alias ip="ip -color=auto"
 
-# Theres probably a better way to do this
 alias ipsum='echo "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."'
 
-# listing files in cool and funny way
 alias l="eza --group-directories-first"
 alias ls="eza -l --group-directories-first"
 alias la="eza -A --group-directories-first"
 alias lsa="eza -lA --group-directories-first"
 
-# clean slate
 alias c="clear && eza -l --group-directories-first"
 
-# vi vi vi the editor of the beast
 alias v="nvim"
 alias vi="nvim"
 alias f="cd"
 
-# we gotta get out of here
 alias b="cd .."
 alias bb="cd ../.."
 alias bbb="cd ../../.."
 
-# linus file keeping program
 alias gc="git commit -m"
 alias gp="git push"
 alias gs="git status"
@@ -88,18 +69,15 @@ alias gl="git clone"
 alias gd="git diff"
 alias gf="git fetch"
 
-# make me a sandwich
 alias s="/usr/bin/sudo"
 alias sudo="echo 'sudo: command not found'"
 
-# hooray
 alias pi="yay -S"
 alias pr="yay -R"
 alias pu="yay"
 
 alias g="grep -i"
 
-# whats the crab called again
 alias cb="cargo build"
 alias cr="cargo run"
 alias ca="cargo add"
@@ -111,7 +89,6 @@ alias feh="feh --scale-down"
 
 alias 2025='echo "YEAR OF THE LINUX DESKTOP"'
 
-# Cool variables: nice one, :)!!
 export EDITOR=nvim
 export MANPAGER="nvim +Man! "
 
