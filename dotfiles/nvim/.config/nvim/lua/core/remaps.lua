@@ -32,6 +32,8 @@ map("<Leader>fh", "<cmd>:Telescope help_tags<CR>") --find help
 map("<Leader>fc", "<cmd>:Telescope menu config_edit<CR>") --find config
 map("<Leader>fn", "<cmd>:ObsidianQuickSwitch<CR>") -- find notes (obsidian)
 
+map("<Leader>t", "<cmd>:lua vim.diagnostic.open_float()<CR>")
+
 -- This is here just so that nvim-cmp can handle command completions
 map("<Tab>", "", "c")
 

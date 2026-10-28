@@ -16,6 +16,7 @@ local plugins = {
     "fugitive",
     "cord",
     "surround",
+    "copilot",
 }
 
 -- Transform the names of modules into their return values

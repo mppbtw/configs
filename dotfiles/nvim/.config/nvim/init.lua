@@ -1,8 +1,3 @@
-local load_colour = function(col)
-    vim.cmd(":colorscheme " .. col)
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-end
-
 -- bootstrap lazy package manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -21,6 +16,11 @@ local plugins = require "plugins"
 require("lazy").setup(plugins)
 
 require("core")
-
--- Quick and dirty way to set the colorscheme, should do this with telescope or smth (baked beans guy plugin)
-load_colour("kanagawa-dragon")
+vim.cmd([[
+  augroup TransparentBackground
+  autocmd!
+  autocmd ColorScheme * highlight Normal ctermbg=none guibg=none
+  autocmd ColorScheme * highlight NonText ctermbg=none guibg=none
+  augroup END
+]])
+vim.cmd(":colorscheme cendre")

@@ -8,9 +8,9 @@ set $right l
 
 set $term alacritty
 
-# TODO: better launcher
-set $menu wofi --show drun
+set $menu wmenu-run -l 10 -i -f 'JetbrainsMonoNL Nerd Font Mono bold 12' -N "#171311" -n "#a09384" -M "#ea9875" -m "#000000" -p"execute $" -S "#ea9875" -s "#000000"
 
+exec swayidle -w timeout 240 'swaylock -f' timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'swaylock -f' before-sleep 'playerctl pause'
 
 exec_always swaync
 
@@ -20,16 +20,19 @@ exec python3 /home/$USER/configs/sway_master_stack.py
 ###############
 # decorations #
 ###############
-set $wallpaper /home/$USER/configs/wallpapers/confusing.png
-exec_always swaybg -m fill -i configs/wallpapers/confusing.png
 
 output HDMI-A-1 resolution 2560x1440@144Hz
+output eDP-1 resolution 1920x1080@60Hz
+output eDP-1 scale 1.4
+exec awww-daemon
+exec_always awww clear 171311
 
 gaps inner 0
 gaps outer 0
 
 default_border pixel 2
-client.focused          #000000 #000000 #000000 #000000 #ffffff
+smart_borders on
+client.focused          #000000 #000000 #000000 #000000 #73665b
 
 ##########
 # inputs #
@@ -39,6 +42,10 @@ input * {
     xkb_layout "gb"
     repeat_rate 40
     repeat_delay 250
+    dwt enabled
+    accel_profile "flat"
+    pointer_accel 0.3
+    scroll_factor 0.5
 }
 
 
@@ -49,12 +56,15 @@ input * {
 ################
 
 # notification info (might be replaced with a dashboard sometime)
-bindsym $mod+c exec notify-send ":)" "$(date +'%T           %d/%m/%y')"
+bindsym $mod+c exec notify-send "$(date +'%T  %d/%m/%y')" "$(acpi | awk -F',' '{print $2 $3}' | awk -F' ' '{print $1 " " " " $2}') remaining"
 
 # $mod+x -> Action on windows
 bindsym --release $mod+q kill
 
+bindsym $mod+s exec grim -g "$(slurp)" - | wl-copy
+
 bindsym $mod+d exec $menu
+bindsym $mod+p exec "swaylock -f"
 
 # Super + mouse1 -> drag floating windows around
 floating_modifier $mod normal
@@ -76,7 +86,13 @@ bindsym $mod+Return exec $term
 
 bindsym $mod+Shift+f exec $browser
 
-bindsym $mod+Shift+v exec 
+bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
+
+bindsym XF86MonBrightnessUp exec brightnessctl s +10%
+
+bindsym Ctrl+XF86MonBrightnessDown exec brightnessctl s 1-
+
+bindsym Ctrl+XF86MonBrightnessUp exec brightnessctl s +1
 
 
 

@@ -24,7 +24,7 @@ y = 0
 [window]
 decorations = "full"
 dynamic_title = false
-opacity = 0.7
+opacity = 0
 title = "Alacritty"
 
 [window.class]
@@ -35,5 +35,26 @@ instance = "Alacritty"
 x = 0
 y = 0
 
-[general]
-import = ["/home/mpp/configs/dotfiles/alacritty/.config/alacritty/themes/everforest_dark.toml"]
+[colors.primary]
+background = "#1F1F1F"
+foreground = "#CCCCCC"
+
+[colors.normal]
+black   = "#171311"
+red     = "#d1766e"
+green   = "#99af6b"
+yellow  = "#f4a21c"
+blue    = "#4e89a2"
+magenta = "#d25780"
+cyan    = "#4d4641"
+white   = "#e6d5c2"
+
+[colors.bright]
+black   = "#666666"
+red     = "#ce9178"
+green   = "#b5cea8"
+yellow  = "#DCDCAA"
+blue    = "#9cdcfe"
+magenta = "#d670d6"
+cyan    = "#9cdcfe"
+white   = "#e5e5e5"
